@@ -1,4 +1,4 @@
-
+let loop = 1
 function guess(){
     var num = parseInt(Math.random() * 10 + 1);
     var userGuess = prompt("input a guess number between 1 to 10");
@@ -6,9 +6,11 @@ function guess(){
       alert("Please, write a number");
     } else {
         if(num == userGuess){
-            alert("Good Work");
+            alert("You got it right in" +  " " + loops + "guesses!" );
         } else {
-            alert("Not matched. Number was " + num);
+            alert("Not matched");
+            let loops = loops + 1
         }
+       
     }
 }
